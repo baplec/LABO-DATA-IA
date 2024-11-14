@@ -12,7 +12,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - mysql_data:/var/lib/mysql
+      - db_data:/var/lib/mysql
     healthcheck:
       test: ["CMD-SHELL", "mysqladmin ping -h localhost -u${MYSQL_USER} -p${MYSQL_PASSWORD}"]
       interval: 10s
@@ -45,7 +45,7 @@ services:
       - ./backend:/app
     ports:
       - "5000:5000"
-    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"]
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000", "--reload"]
 
   react:
     build:
@@ -54,6 +54,10 @@ services:
     container_name: react
     ports:
       - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: ["npm", "start"]
 
 volumes:
-  mysql_data:
+  db_data:
