@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "labo-data-ia"
+name = "backend"
 version = "0.1.0"
 description = ""
-authors = ["matheodrd <matheodurand14@gmail.com>"]
+authors = []
 readme = "README.md"
 
 [tool.poetry.dependencies]
