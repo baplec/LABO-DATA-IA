@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "labo-data-ia"
+version = "0.1.0"
+description = ""
+authors = ["matheodrd <matheodurand14@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["standard"], version = "^0.115.5"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
