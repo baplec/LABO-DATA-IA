@@ -57,6 +57,8 @@ services:
     volumes:
       - ./frontend:/app
       - /app/node_modules
+    environment:
+      - WATCHPACK_POLLING=true
     command: ["npm", "start"]
 
 volumes:
