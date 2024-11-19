@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "backend"
+name = "labo-data-ia"
 version = "0.1.0"
-description = ""
+description = "Backend Labo Data IA"
 authors = []
 readme = "README.md"
 
